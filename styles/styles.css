@@ -1,0 +1,72 @@
+body {
+  background-image: url("https://cdn.codewizardshq.com/9c5e922465679c1361b8714c5bc98c093058c240dc475da8b3b559f69d50ad15.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 40px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  overflow: hidden;
+  cursor: url("https://cdn.codewizardshq.com/5f9f16082c93bcabd74929673d539c903df9b3e7f80bba1162106274ca4bd01d.png"), auto;
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: normal;
+  font-size: 64px;
+}
+
+p {
+  font-family: "Satisfy", cursive;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 1s all linear;
+}
+
+.snitch {
+  height: 100px;
+  width: auto;
+}
+
+.dementor {
+  width: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: fly 30s infinite;
+}
+
+@keyframes fly {
+  0% {
+    top: 0px;
+    left: 0px;
+  }
+  25% {
+    top: 200px;
+    left: 300px;
+  }
+  50% {
+    top: 50px;
+    left: 600px;
+  }
+  75% {
+    top: 800px;
+    left: 800px;
+  }
+  100% {
+    top: 500px;
+    left: 1200px;
+  }
+}
+.time {
+  font-family: oswald;
+}/*# sourceMappingURL=styles.css.map */

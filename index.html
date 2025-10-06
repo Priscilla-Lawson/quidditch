@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quidditch</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <h1>Let't play quidditch</h1>
+    <p>Click on the golden snitch to catch it.</p>
+    <h3 class="time"></h3>
+    <img src="images/demq.gif" alt="dementor" class="dementor">
+    <div class="container">
+        <img src="images/snq.gif" alt="snitch" class="snitch">
+    </div>
+    <script>
+        var seconds = 20;
+        var interval = setInterval(timer, 1000);
+
+        function changePos(){
+            var topPos = Math.random()*500;
+            var leftPos = Math.random()*800;
+            $('.container').css('top', topPos);
+            $('.container').css('left', leftPos);
+        }
+
+        $('.container').hover(changePos);
+        $('.snitch').hover(changePos);
+
+        function caught(){
+            $('.snitch').css('height', '400px');
+            $('.snitch').attr('src', 'images/sq.png');
+             $('.snitch').off();
+            $('.container').off();
+            $('.dementor').hide();
+            clearInterval(interval);
+            $('.time').hide();
+            $('h1').text(`You caught the snitch with ${seconds} seconds left.`)
+            $('p').text('Refresh to play again')
+        }
+
+        $('.snitch').click(caught);
+
+        function gameover(){
+            $('.dementor').css('width', '600px');
+            $('h1').text(`Game Over! The dementor has taken over!`);
+            $('p').text(`Refresh to play again`);
+            $('.snitch').hide();
+            clearInterval(interval);
+            $('.time').hide();
+        }
+
+        $('.dementor').click(gameover);
+
+        function timer(){
+            seconds--;
+            $('.time').text(`Time left: ${seconds}`);
+            if (seconds <= 0){
+                clearInterval(interval);
+                timeout();
+            }
+        }
+
+        function timeout(){
+            $('h1').text(`Game Over! You ran out of time.`);
+            $('p').text(`Refresh to play again`);
+            $('.dementor').hide();
+            $('.snitch').hide();
+        }
+    </script>
+</body>
+</html>
