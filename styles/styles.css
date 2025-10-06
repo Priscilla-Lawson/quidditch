@@ -5,7 +5,6 @@ body {
   padding: 40px;
   font-family: "Roboto", sans-serif;
   text-align: center;
-  overflow: hidden;
   cursor: url("harq.png"), auto;
   height: 100vh;
 }
