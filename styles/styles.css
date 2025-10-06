@@ -1,5 +1,5 @@
 body {
-  background-image: url("bgq.jpg");
+  background-image: url('bgq.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   padding: 40px;
