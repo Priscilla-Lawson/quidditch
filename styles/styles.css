@@ -1,12 +1,12 @@
 body {
-  background-image: url('bgq.jpg');
+  background-image: url("../images/bgq.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 40px;
   font-family: "Roboto", sans-serif;
   text-align: center;
   overflow: hidden;
-  cursor: url("harq.png"), auto;
+  cursor: url("../images/harq.png"), auto;
 }
 
 h1 {
